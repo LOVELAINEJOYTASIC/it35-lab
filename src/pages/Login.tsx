@@ -1,8 +1,12 @@
 import { 
+  IonAvatar,
     IonButton,
     IonButtons,
       IonContent, 
       IonHeader, 
+      IonInput, 
+      IonInputPasswordToggle, 
+      IonItem, 
       IonMenuButton, 
       IonPage, 
       IonTitle, 
@@ -22,7 +26,15 @@ import {
           <IonToolbar>
             <IonTitle>Login</IonTitle>
           </IonToolbar>
-        </IonHeader>
+           </IonHeader>
+           <IonAvatar>
+        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+      </IonAvatar>
+      <IonItem>
+      <IonInput label="password" placeholder="Enter company name"></IonInput>
+      <IonInputPasswordToggle slot="end"></IonInputPasswordToggle>
+      <IonInput label="username" placeholder="Enter text"></IonInput>
+      </IonItem>
         <IonContent className='ion-padding'>
             <IonButton onClick={() => doLogin()} expand="full">
                 Login
