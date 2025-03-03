@@ -6,11 +6,14 @@ import {
   IonMenuButton, 
   IonPage, 
   IonTitle, 
-  IonToolbar 
+  IonToolbar, 
+  IonButton,
+  IonAlert
 } from '@ionic/react';
 
 const About: React.FC = () => {
   const [dateTime, setDateTime] = useState(new Date());
+  const [showAlert, setShowAlert] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -35,7 +38,15 @@ const About: React.FC = () => {
           <div style={{ marginBottom: '20px' }}>
             {dateTime.toLocaleDateString()} {dateTime.toLocaleTimeString()}
           </div>
-
+          <IonButton onClick={() => setShowAlert(true)}>Show Alert</IonButton>
+          <IonAlert
+            isOpen={showAlert}
+            onDidDismiss={() => setShowAlert(false)}
+            header={'Alert'}
+            subHeader={'Important message'}
+            message={'This is an alert message.'}
+            buttons={['OK']}
+          />
         </div>
       </IonContent>
     </IonPage>
