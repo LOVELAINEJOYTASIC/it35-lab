@@ -19,15 +19,15 @@ import {
 import { logoIonic } from 'ionicons/icons';
 
 const Login: React.FC = () => {
-  const [loading, setLoading] = useState(false); // To control the progress bar
+  const [loading, setLoading] = useState(false); 
   const navigation = useIonRouter();
 
   const doLogin = () => {
-    setLoading(true); // Start the loading progress bar
-    // Simulate a login process with a timeout
+    setLoading(true); 
+   
     setTimeout(() => {
-      setLoading(false); // Stop the loading progress bar after 2 seconds
-      navigation.push('/it35-lab/app', 'forward', 'replace'); // Navigate to the next page
+      setLoading(false); 
+      navigation.push('/it35-lab/app', 'forward', 'replace'); 
     }, 2000);
   };
 
@@ -39,7 +39,7 @@ const Login: React.FC = () => {
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">
-        {/* Progress Bar */}
+    
         {loading && (
           <IonProgressBar type="indeterminate" />
         )}

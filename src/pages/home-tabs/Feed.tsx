@@ -1,5 +1,6 @@
 import { 
   IonButtons,
+  IonCard,
   IonCardContent,
   IonCardHeader,
   IonCardSubtitle,
@@ -9,7 +10,11 @@ import {
   IonMenuButton, 
   IonPage, 
   IonTitle, 
-  IonToolbar 
+  IonToolbar,
+  IonItem,
+  IonLabel,
+  IonList,
+  IonThumbnail
 } from '@ionic/react';
 
 const Feed: React.FC = () => {
@@ -18,7 +23,7 @@ const Feed: React.FC = () => {
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">
-            <IonMenuButton></IonMenuButton>
+            <IonMenuButton />
           </IonButtons>
           <IonTitle>Feed</IonTitle>
         </IonToolbar>
@@ -32,17 +37,38 @@ const Feed: React.FC = () => {
             height: '100%',
             flexDirection: 'column', 
             gap: '30px', 
+            padding: '20px', 
           }}
         >
-          <div></div>
+          <IonCard>
             <IonCardHeader>
-              <IonCardTitle>Welcome to Ljs Coffee shop!</IonCardTitle>
+              <IonCardTitle>Brewtopia</IonCardTitle>
+              <IonCardSubtitle></IonCardSubtitle>
             </IonCardHeader>
             <IonCardContent>
-            We're thrilled to have you here. Whether you're in the mood for a cozy cappuccino, an energizing iced latte, or a freshly brewed cup of your favorite coffee, we’ve got just the thing for you. Our baristas are ready to craft the perfect drink just for you. Take a seat, relax, and let us serve you something special today!
+              <IonList>
+                <IonItem>
+                  <IonThumbnail slot="start">
+                  <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+                  </IonThumbnail>
+                  <IonLabel>Spanish latte</IonLabel>
+                </IonItem>
 
-
+                <IonItem>
+                  <IonThumbnail slot="start">
+                  <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+                  </IonThumbnail>
+                  <IonLabel>Matcha coffee</IonLabel>
+                </IonItem>
+                <IonItem>
+            <IonThumbnail slot="start">
+            <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+            </IonThumbnail>
+            <IonLabel>Strawberry milk shake</IonLabel>
+          </IonItem>
+              </IonList>
             </IonCardContent>
+          </IonCard>
         </div>
       </IonContent>
     </IonPage>
