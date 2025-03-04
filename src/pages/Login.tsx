@@ -58,7 +58,7 @@ const Login: React.FC = () => {
           </IonItem>
           
           <IonButton onClick={() => doLogin()} expand="full">
-            LOGIN FORM
+            Enter
           </IonButton>
         </div>
       </IonContent>
