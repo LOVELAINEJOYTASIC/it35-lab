@@ -35,7 +35,7 @@ const Login: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Login</IonTitle>
+          <IonTitle>LOGIN FORM</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">
@@ -58,11 +58,12 @@ const Login: React.FC = () => {
           </IonItem>
           
           <IonButton onClick={() => doLogin()} expand="full">
-            Login
+            LOGIN FORM
           </IonButton>
         </div>
       </IonContent>
     </IonPage>
+
   );
 };
 

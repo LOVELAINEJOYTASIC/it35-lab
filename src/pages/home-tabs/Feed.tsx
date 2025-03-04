@@ -40,10 +40,11 @@ const Feed: React.FC = () => {
             padding: '20px', 
           }}
         >
+
           <IonCard>
             <IonCardHeader>
-              <IonCardTitle>Brewtopia</IonCardTitle>
-              <IonCardSubtitle></IonCardSubtitle>
+              <IonCardTitle>Brewtopia best sellers</IonCardTitle>
+              <IonCardSubtitle>We're thrilled to have you here. Whether you're in the mood for a cozy cappuccino,an energizing iced latte, or a freshly brewed cup of your favorite coffee, Take a seat, relax, and let us serve you something special today!</IonCardSubtitle>
             </IonCardHeader>
             <IonCardContent>
               <IonList>
@@ -66,6 +67,12 @@ const Feed: React.FC = () => {
             </IonThumbnail>
             <IonLabel>Strawberry milk shake</IonLabel>
           </IonItem>
+          <IonItem>
+                  <IonThumbnail slot="start">
+                  <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+                  </IonThumbnail>
+                  <IonLabel>Caramel Iced Coffee</IonLabel>
+                </IonItem>
               </IonList>
             </IonCardContent>
           </IonCard>
