@@ -9,6 +9,8 @@ import {
   IonPage,  
   IonToast,  
   useIonRouter
+
+
 } from '@ionic/react';
 import { logoIonic } from 'ionicons/icons';
 import { useState } from 'react';
@@ -89,6 +91,7 @@ const Login: React.FC = () => {
             placeholder="Enter Email"
             value={email}
             onIonChange={e => setEmail(e.detail.value!)}
+            
           />
           <IonInput style={{ marginTop:'10px' }}      
             fill="outline"
