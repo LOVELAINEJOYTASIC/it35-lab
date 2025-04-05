@@ -2,15 +2,15 @@ import {
   IonAlert,
   IonAvatar,
   IonButton,
+  IonCheckbox,
   IonContent, 
   IonIcon, 
   IonInput, 
   IonInputPasswordToggle,  
+  IonLabel,
   IonPage,  
   IonToast,  
   useIonRouter
-
-
 } from '@ionic/react';
 import { logoIonic } from 'ionicons/icons';
 import { useState } from 'react';
@@ -35,8 +35,15 @@ const Login: React.FC = () => {
   const [alertMessage, setAlertMessage] = useState('');
   const [showAlert, setShowAlert] = useState(false);
   const [showToast, setShowToast] = useState(false);
+  const [isRobotChecked, setIsRobotChecked] = useState(false); // New state for checkbox
 
   const doLogin = async () => {
+    if (!isRobotChecked) {
+      setAlertMessage('Please confirm that you are not a robot.');
+      setShowAlert(true);
+      return;
+    }
+
     const { error } = await supabase.auth.signInWithPassword({ email, password });
 
     if (error) {
@@ -91,7 +98,6 @@ const Login: React.FC = () => {
             placeholder="Enter Email"
             value={email}
             onIonChange={e => setEmail(e.detail.value!)}
-            
           />
           <IonInput style={{ marginTop:'10px' }}      
             fill="outline"
@@ -102,8 +108,27 @@ const Login: React.FC = () => {
           >
             <IonInputPasswordToggle slot="end"></IonInputPasswordToggle>
           </IonInput>
+          
+          {/* "I'm not a robot" checkbox with a notification message */}
+          <div style={{ marginTop: '15px', display: 'flex', alignItems: 'center' }}>
+            <IonCheckbox 
+              checked={isRobotChecked} 
+              onIonChange={e => setIsRobotChecked(e.detail.checked)} 
+            />
+            <IonLabel style={{ marginLeft: '8px' }}>I'm not a robot</IonLabel>
+          </div>
+          {/* Notification message */}
+          <div style={{ marginTop: '5px', fontSize: '12px', color: '#6c757d' }}>
+            <p>Please verify that you are a human by checking the box above. This helps us prevent automated login attempts.</p>
+          </div>
         </div>
-        <IonButton onClick={doLogin} expand="full" shape='round'>
+        
+        <IonButton 
+          onClick={doLogin} 
+          expand="full" 
+          shape='round' 
+          disabled={!isRobotChecked} // Disable button if checkbox is not checked
+        >
           Login
         </IonButton>
 
