@@ -182,8 +182,6 @@ const Login: React.FC = () => {
                 borderRadius: '12px',
                 transition: 'all 0.3s ease',
               }}
-              onMouseEnter={(e) => e.target.style.backgroundColor = '#2f55b4'} // Hover effect
-              onMouseLeave={(e) => e.target.style.backgroundColor = '#4C75F6'}
             >
               Login
             </IonButton>
@@ -200,8 +198,6 @@ const Login: React.FC = () => {
                 fontWeight: '600',
                 borderRadius: '12px',
               }}
-              onMouseEnter={(e) => e.target.style.color = '#2f55b4'} // Hover effect
-              onMouseLeave={(e) => e.target.style.color = '#4C75F6'}
             >
               Don't have an account? Register here
             </IonButton>
