@@ -112,7 +112,7 @@ const Login: React.FC = () => {
               User Login
             </h1>
 
-            {/* Email Input */}
+ 
             <IonInput
               label="Email"
               labelPlacement="floating"
@@ -125,11 +125,11 @@ const Login: React.FC = () => {
                 marginBottom: '20px',
                 width: '100%',
                 borderRadius: '10px',
-                color: '#000' // ✅ Make text visible
+                color: '#000' 
               }}
             />
 
-            {/* Password Input */}
+          
             <IonInput
               fill="outline"
               type="password"
@@ -140,7 +140,7 @@ const Login: React.FC = () => {
                 marginBottom: '20px',
                 width: '100%',
                 borderRadius: '10px',
-                color: '#000' // ✅ Make text visible
+                color: '#000' 
               }}
             >
               <IonInputPasswordToggle slot="end" />
