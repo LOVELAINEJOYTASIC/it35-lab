@@ -7,6 +7,7 @@ import {
   IonInputPasswordToggle,
   IonPage,
   IonToast,
+  IonLoading,
   useIonRouter
 } from '@ionic/react';
 import { useState } from 'react';
@@ -35,20 +36,31 @@ const Login: React.FC = () => {
   const [alertMessage, setAlertMessage] = useState('');
   const [showAlert, setShowAlert] = useState(false);
   const [showToast, setShowToast] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [isRedirecting, setIsRedirecting] = useState(false);
 
   const doLogin = async () => {
+    setLoading(true);
     const { error } = await supabase.auth.signInWithPassword({ email, password });
 
     if (error) {
       setAlertMessage(error.message);
       setShowAlert(true);
+      setLoading(false);
       return;
     }
 
-    setShowToast(true);
     setTimeout(() => {
-      navigation.push('/it35-lab/app', 'forward', 'replace');
-    }, 300);
+      setLoading(false);
+      setShowToast(true);
+      setIsRedirecting(true);
+    }, 1000);
+
+    setTimeout(() => {
+      if (isRedirecting) {
+        navigation.push('/it35-lab/app', 'forward', 'replace');
+      }
+    }, 1500);
   };
 
   return (
@@ -80,16 +92,12 @@ const Login: React.FC = () => {
           >
             <IonAvatar
               style={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
                 width: '120px',
                 height: '120px',
-                borderRadius: '50%',
                 marginBottom: '20px',
-                boxShadow: '0 8px 20px rgba(0, 0, 0, 0.15)',
+                margin: '0 auto',
                 overflow: 'hidden',
-                margin: '0 auto'
+                boxShadow: '0 8px 20px rgba(0, 0, 0, 0.15)'
               }}
             >
               <img
@@ -101,7 +109,7 @@ const Login: React.FC = () => {
 
             <h1
               style={{
-                color: '#4C75F6',
+                color: '#FF5733', // Custom color for "User Login"
                 marginBottom: '20px',
                 fontWeight: '600',
                 fontSize: '1.8rem',
@@ -112,7 +120,6 @@ const Login: React.FC = () => {
               User Login
             </h1>
 
- 
             <IonInput
               label="Email"
               labelPlacement="floating"
@@ -125,11 +132,10 @@ const Login: React.FC = () => {
                 marginBottom: '20px',
                 width: '100%',
                 borderRadius: '10px',
-                color: '#000' 
+                color: '#000'
               }}
             />
 
-          
             <IonInput
               fill="outline"
               type="password"
@@ -140,7 +146,7 @@ const Login: React.FC = () => {
                 marginBottom: '20px',
                 width: '100%',
                 borderRadius: '10px',
-                color: '#000' 
+                color: '#000'
               }}
             >
               <IonInputPasswordToggle slot="end" />
@@ -150,8 +156,9 @@ const Login: React.FC = () => {
               onClick={doLogin}
               expand="full"
               shape="round"
+              color="none"
               style={{
-                backgroundColor: '#4C75F6',
+                backgroundColor: '#28a745',
                 color: 'white',
                 fontWeight: '600',
                 padding: '15px',
@@ -169,7 +176,7 @@ const Login: React.FC = () => {
               shape="round"
               style={{
                 marginTop: '15px',
-                color: '#4C75F6',
+                color: '#FF5733', // Custom color for "Don't have an account?"
                 fontWeight: '600',
                 borderRadius: '12px'
               }}
@@ -188,6 +195,8 @@ const Login: React.FC = () => {
             position="top"
             color="primary"
           />
+
+          <IonLoading isOpen={loading} message="Logging in..." duration={0} spinner="crescent" />
         </div>
       </IonContent>
     </IonPage>

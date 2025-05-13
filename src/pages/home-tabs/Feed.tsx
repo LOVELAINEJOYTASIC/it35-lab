@@ -1,11 +1,11 @@
 import { 
   IonButtons,
-    IonContent, 
-    IonHeader, 
-    IonMenuButton, 
-    IonPage, 
-    IonTitle, 
-    IonToolbar 
+  IonContent, 
+  IonHeader, 
+  IonMenuButton, 
+  IonPage, 
+  IonTitle, 
+  IonToolbar 
 } from '@ionic/react';
 import FeedContainer from '../../components/feedContainer';
 
@@ -13,11 +13,11 @@ const Feed: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
+        <IonToolbar style={{ backgroundColor: '#1A1A1A' }}> 
           <IonButtons slot='start'>
-            <IonMenuButton></IonMenuButton>
+            <IonMenuButton color="light" /> 
           </IonButtons>
-          <IonTitle>Feed</IonTitle>
+          <IonTitle style={{ color: '#ffffff' }}>Feed</IonTitle> 
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen>
