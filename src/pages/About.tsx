@@ -216,14 +216,14 @@ const About: React.FC = () => {
           </IonCardContent>
         </IonCard>
 
-        
+        {/* 🔽 LOCATION SECTION ADDED HERE 🔽 */}
         <IonCard className="card-hover" style={{ marginTop: '30px', backgroundColor: '#FFFFFF' }}>
           <IonCardHeader style={{ backgroundColor: '#E8F5E9' }}>
             <IonCardTitle style={{ color: '#2E7D32' }}>Find Us</IonCardTitle>
           </IonCardHeader>
           <IonCardContent>
             <img
-              src="https://coffeebean.com.au/cdn/shop/articles/nathan-dumlao-6VhPY27jdps-unsplash_1600x.jpg?v=1670108329"
+              src="https://i.pinimg.com/736x/f0/65/5f/f0655f2737da76be9b4ac435c65e3d9b.jpg"
               alt="Brewtopia Location"
               style={{ width: '100%', borderRadius: '12px', marginBottom: '15px' }}
             />
@@ -236,7 +236,7 @@ const About: React.FC = () => {
           </IonCardContent>
         </IonCard>
 
-       
+        {/* SOCIAL MEDIA */}
         <div style={{ textAlign: 'center', paddingTop: '20px', paddingBottom: '30px' }}>
           <IonText style={{ color: '#81C784', fontSize: '1rem' }}>Connect with us:</IonText>
           <div style={{ marginTop: '10px', fontSize: '1.8rem', display: 'flex', justifyContent: 'center', gap: '20px' }}>
