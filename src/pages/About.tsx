@@ -40,7 +40,7 @@ const About: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar style={{ backgroundColor: '#4CAF50' }}>
+        <IonToolbar style={{ backgroundColor: '#4A90E2' }}> {/* Soft Blue */}
           <IonButtons slot="start">
             <IonMenuButton />
           </IonButtons>
@@ -50,12 +50,13 @@ const About: React.FC = () => {
         </IonToolbar>
       </IonHeader>
 
-      <IonContent fullscreen style={{ backgroundColor: '#F9FBF9', padding: '20px' }}>
+      <IonContent fullscreen style={{ backgroundColor: '#FFFFFF', padding: '20px' }}> {/* White Background */}
         <style>
           {`
             .card-hover {
               transition: transform 0.3s ease, box-shadow 0.3s ease;
               border-radius: 16px;
+              box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             }
             .card-hover:hover {
               transform: translateY(-5px) scale(1.02);
@@ -76,11 +77,11 @@ const About: React.FC = () => {
         </style>
 
         <div style={{ textAlign: 'center', paddingTop: '30px' }}>
-          <h2 className="fade-in" style={{ color: '#2E7D32', fontSize: '2rem', fontWeight: '700', marginBottom: '10px' }}>
-            Welcome to Brewtopia!
+          <h2 className="fade-in" style={{ color: '#4A90E2', fontSize: '2rem', fontWeight: '700', marginBottom: '10px' }}>
+            Welcome to Ionic React!
           </h2>
-          <p style={{ color: '#81C784', fontSize: '1rem', marginTop: '10px' }}>
-            Your cozy stop for delightful brews and crafted drinks.
+          <p style={{ color: '#333', fontSize: '1rem', marginTop: '10px' }}>
+            Building modern, scalable, and beautiful mobile apps that power your digital journey.
           </p>
 
           <IonButton
@@ -89,7 +90,7 @@ const About: React.FC = () => {
               maxWidth: '300px',
               margin: '20px auto',
               borderRadius: '12px',
-              backgroundColor: '#4CAF50',
+              backgroundColor: '#4A90E2',  /* Soft Blue */
               color: '#fff',
             }}
             href="/contact"
@@ -100,15 +101,15 @@ const About: React.FC = () => {
         </div>
 
         <IonCard className="card-hover" style={{ marginTop: '30px', backgroundColor: '#FFFFFF' }}>
-          <IonCardHeader style={{ backgroundColor: '#E8F5E9' }}>
-            <IonCardTitle style={{ color: '#2E7D32' }}>Brewtopia Best Sellers</IonCardTitle>
-            <IonCardSubtitle style={{ color: '#81C784' }}>
-              Whether it’s a cozy cappuccino or a refreshing iced latte, we have something special for every taste.
+          <IonCardHeader style={{ backgroundColor: '#4A90E2' }}> {/* Soft Blue */}
+            <IonCardTitle style={{ color: '#fff' }}>Top Projects</IonCardTitle>
+            <IonCardSubtitle style={{ color: '#4A90E2' }}>
+              Explore app innovation.
             </IonCardSubtitle>
           </IonCardHeader>
           <IonCardContent>
             <IonList>
-              {['Spanish Latte', 'Matcha Coffee', 'Strawberry Milk Shake', 'Caramel Iced Coffee'].map(
+              {['JPOST – Sidequest – it35-lab', 'Enterprise – Appdev', 'Sia – IAS'].map(
                 (item, index) => (
                   <IonItem key={index} lines="none" style={{ borderBottom: '1px solid #eee' }}>
                     <IonThumbnail slot="start">
@@ -118,7 +119,9 @@ const About: React.FC = () => {
                         style={{ borderRadius: '8px' }}
                       />
                     </IonThumbnail>
-                    <IonLabel style={{ fontWeight: '500', color: '#2E7D32' }}>{item}</IonLabel>
+                    <IonLabel style={{ fontWeight: '500', color: '#4A90E2' }}>
+                      {item}
+                    </IonLabel>
                   </IonItem>
                 )
               )}
@@ -127,12 +130,12 @@ const About: React.FC = () => {
         </IonCard>
 
         <IonCard className="card-hover" style={{ marginTop: '30px', backgroundColor: '#FFFFFF' }}>
-          <IonCardHeader style={{ backgroundColor: '#E8F5E9' }}>
-            <IonCardTitle style={{ color: '#2E7D32' }}>Meet Our Baristas</IonCardTitle>
+          <IonCardHeader style={{ backgroundColor: '#4A90E2' }}>
+            <IonCardTitle style={{ color: '#fff' }}>Meet Our Developers</IonCardTitle>
           </IonCardHeader>
           <IonCardContent>
             <IonList>
-              {[{ name: 'Mia', role: 'Latte Artist' }, { name: 'Jake', role: 'Brew Master' }, { name: 'Luna', role: 'Customer Experience' }].map(
+              {[{ name: 'Lovelaine Joy Tasic', role: 'Frontend Engineer' }, { name: 'Rey Sinabianan', role: 'Full Stack Developer' }, { name: 'Kyle Remulta', role: 'UX Designer' }].map(
                 (person, i) => (
                   <IonItem key={i} style={{ borderBottom: '1px solid #eee' }}>
                     <IonThumbnail slot="start">
@@ -143,8 +146,8 @@ const About: React.FC = () => {
                       />
                     </IonThumbnail>
                     <IonLabel>
-                      <h2 style={{ color: '#2E7D32' }}>{person.name}</h2>
-                      <p style={{ color: '#81C784' }}>{person.role}</p>
+                      <h2 style={{ color: '#4A90E2' }}>{person.name}</h2>
+                      <p style={{ color: '#4A90E2' }}>{person.role}</p>
                     </IonLabel>
                   </IonItem>
                 )
@@ -154,17 +157,17 @@ const About: React.FC = () => {
         </IonCard>
 
         <IonCard className="card-hover" style={{ marginTop: '30px', backgroundColor: '#FFFFFF' }}>
-          <IonCardHeader style={{ backgroundColor: '#E8F5E9' }}>
-            <IonCardTitle style={{ color: '#2E7D32' }}>Customer Love</IonCardTitle>
+          <IonCardHeader style={{ backgroundColor: '#4A90E2' }}>
+            <IonCardTitle style={{ color: '#fff' }}>Client Testimonials</IonCardTitle>
           </IonCardHeader>
           <IonCardContent>
             <IonList>
-              {[{ name: 'Ella', text: 'The best coffee in town!' }, { name: 'Max', text: 'Always a warm vibe and great brews.' }].map(
+              {[{ name: 'LJ', text: 'Great mobile apps are built with great frameworks like Ionic' }, { name: 'Rey', text: 'Ionic makes cross-platform development feel native, without the complexity' }].map(
                 (review, i) => (
                   <IonItem key={i} style={{ borderBottom: '1px solid #eee' }}>
                     <IonLabel>
-                      <h3 style={{ color: '#2E7D32' }}>"{review.text}"</h3>
-                      <p style={{ color: '#81C784' }}>- {review.name}</p>
+                      <h3 style={{ color: '#4A90E2' }}>"{review.text}"</h3>
+                      <p style={{ color: '#4A90E2' }}>- {review.name}</p>
                     </IonLabel>
                   </IonItem>
                 )
@@ -174,12 +177,12 @@ const About: React.FC = () => {
         </IonCard>
 
         <IonCard className="card-hover" style={{ marginTop: '30px', padding: '10px', backgroundColor: '#FFFFFF' }}>
-          <IonCardHeader style={{ backgroundColor: '#E8F5E9' }}>
-            <IonCardTitle style={{ color: '#2E7D32' }}>Stay Updated</IonCardTitle>
+          <IonCardHeader style={{ backgroundColor: '#4A90E2' }}>
+            <IonCardTitle style={{ color: '#fff' }}>Subscribe to Updates</IonCardTitle>
           </IonCardHeader>
           <IonCardContent>
             <IonItem>
-              <IonLabel position="stacked" style={{ color: '#2E7D32' }}>Email Address</IonLabel>
+              <IonLabel position="stacked" style={{ color: '#4A90E2' }}>Email Address</IonLabel>
               <input
                 type="email"
                 value={email}
@@ -189,7 +192,7 @@ const About: React.FC = () => {
                   width: '100%',
                   padding: '10px',
                   borderRadius: '8px',
-                  border: '1px solid #81C784',
+                  border: '1px solid #4A90E2',
                   marginTop: '5px',
                 }}
               />
@@ -198,7 +201,7 @@ const About: React.FC = () => {
               expand="block"
               style={{
                 marginTop: '15px',
-                backgroundColor: '#4CAF50',
+                backgroundColor: '#4A90E2',
                 color: '#fff',
                 borderRadius: '12px'
               }}
@@ -210,44 +213,42 @@ const About: React.FC = () => {
               isOpen={showAlert}
               onDidDismiss={() => setShowAlert(false)}
               header="Subscribed!"
-              message="Thank you for subscribing to Brewtopia!"
+              message="Thanks for subscribing to updates!"
               buttons={['OK']}
             />
           </IonCardContent>
         </IonCard>
 
-        {/* 🔽 LOCATION SECTION ADDED HERE 🔽 */}
         <IonCard className="card-hover" style={{ marginTop: '30px', backgroundColor: '#FFFFFF' }}>
-          <IonCardHeader style={{ backgroundColor: '#E8F5E9' }}>
-            <IonCardTitle style={{ color: '#2E7D32' }}>Find Us</IonCardTitle>
+          <IonCardHeader style={{ backgroundColor: '#4A90E2' }}>
+            <IonCardTitle style={{ color: '#fff' }}>Our Office</IonCardTitle>
           </IonCardHeader>
           <IonCardContent>
             <img
-              src="https://i.pinimg.com/736x/f0/65/5f/f0655f2737da76be9b4ac435c65e3d9b.jpg"
-              alt="Brewtopia Location"
+              src="https://i.pinimg.com/736x/e0/70/a0/e070a0fe5560532153a7bb51dd53a685.jpg"
+              alt="Office Location"
               style={{ width: '100%', borderRadius: '12px', marginBottom: '15px' }}
             />
-            <IonText style={{ color: '#2E7D32', fontWeight: '500' }}>
-              📍 123 Coffee Lane, Brewtown, BT 45678
+            <IonText style={{ color: '#4A90E2', fontWeight: '500' }}>
+              📍 Manolo Fortich, Bukidnon.
             </IonText>
-            <p style={{ color: '#81C784', marginTop: '10px' }}>
-              Open daily from 7 AM to 9 PM. Drop by for your morning fix or a cozy evening cup!
+            <p style={{ color: '#4A90E2', marginTop: '10px' }}>
+               Designed with 💙 in Bukidnon, PH!
             </p>
           </IonCardContent>
         </IonCard>
 
-        {/* SOCIAL MEDIA */}
         <div style={{ textAlign: 'center', paddingTop: '20px', paddingBottom: '30px' }}>
-          <IonText style={{ color: '#81C784', fontSize: '1rem' }}>Connect with us:</IonText>
+          <IonText style={{ color: '#4A90E2', fontSize: '1rem' }}>Connect with us:</IonText>
           <div style={{ marginTop: '10px', fontSize: '1.8rem', display: 'flex', justifyContent: 'center', gap: '20px' }}>
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-              <IonIcon icon={logoFacebook} style={{ color: '#4CAF50' }} />
+              <IonIcon icon={logoFacebook} style={{ color: '#4A90E2' }} />
             </a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-              <IonIcon icon={logoInstagram} style={{ color: '#66BB6A' }} />
+              <IonIcon icon={logoInstagram} style={{ color: '#4A90E2' }} />
             </a>
             <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
-              <IonIcon icon={logoYoutube} style={{ color: '#81C784' }} />
+              <IonIcon icon={logoYoutube} style={{ color: '#4A90E2' }} />
             </a>
           </div>
         </div>

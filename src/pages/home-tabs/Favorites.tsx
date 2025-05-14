@@ -26,7 +26,6 @@ const Favorites: React.FC = () => {
       </IonHeader>
 
       <IonContent fullscreen>
-        {/* Hover effect styles */}
         <style>
           {`
             .hover-card {
@@ -65,60 +64,25 @@ const Favorites: React.FC = () => {
           }}
         >
           {[
-            {
-              title: 'Matcha Coffee',
-              subtitle: 'Green tea + espresso',
-              content: 'Earthy and creamy',
-              color: 'primary'
-            },
-            {
-              title: 'Spanish Latte',
-              subtitle: 'Rich espresso blend',
-              content: 'Sweet & smooth',
-              color: 'secondary'
-            },
-            {
-              title: 'Macchiato Coffee',
-              subtitle: 'Espresso with foam',
-              content: 'Balanced intensity',
-              color: 'tertiary'
-            },
-            {
-              title: 'Black Coffee',
-              subtitle: 'Pure & bold',
-              content: 'No milk, just magic',
-              color: 'dark'
-            },
-            {
-              title: 'Mocha Iced Coffee',
-              subtitle: 'Chocolate & espresso',
-              content: 'Cool and chocolaty',
-              color: 'warning'
-            },
-            {
-              title: 'Red Velvet Coffee',
-              subtitle: 'Unique twist',
-              content: 'Vibrant and rich',
-              color: 'danger'
-            },
-            {
-              title: 'Cinnamon Iced Coffee',
-              subtitle: 'Spiced treat',
-              content: 'Perfectly refreshing',
-              color: 'light'
-            },
-            {
-              title: 'Flat White',
-              subtitle: 'Smooth microfoam',
-              content: 'Espresso-forward',
-              color: 'medium'
-            },
-            {
-              title: 'Caramel Iced Coffee',
-              subtitle: 'Sweet & bold',
-              content: 'Fan favorite',
-              color: 'dark'
-            }
+            { title: 'Ionic Framework', subtitle: 'Hybrid App Power', content: 'Build cross-platform apps using web tech!', color: 'primary' },
+            { title: 'Capacitor', subtitle: 'Native Power, Web Simplicity', content: 'Access native features easily with JS.', color: 'secondary' },
+            { title: 'Angular + Ionic', subtitle: 'Built to Scale', content: 'A perfect combo for enterprise-grade apps.', color: 'tertiary' },
+            { title: 'React + Ionic', subtitle: 'Component-Based', content: 'Build modular UIs with React and Ionic.', color: 'dark' },
+            { title: 'Live Reload', subtitle: 'Fast Development', content: 'Update code in real-time during development.', color: 'warning' },
+            { title: 'App Store Ready', subtitle: 'One Codebase, Many Platforms', content: 'Deploy to iOS, Android, and Web!', color: 'danger' },
+            { title: 'PWA Support', subtitle: 'Progressive Web Apps', content: 'Ionic makes it easy to build PWAs.', color: 'light' },
+            { title: 'Theming', subtitle: 'Design with Variables', content: 'Customize your UI with CSS variables.', color: 'medium' },
+            { title: 'Community Support', subtitle: 'Huge Developer Base', content: 'Thousands of plugins and active devs.', color: 'success' },
+            { title: 'Ionic CLI', subtitle: 'Your Dev Companion', content: 'Powerful commands for scaffolding and building apps.', color: 'primary' },
+            { title: 'Ionic Storage', subtitle: 'Persistent Data', content: 'Store data across sessions with ease.', color: 'secondary' },
+            { title: 'Gesture Controller', subtitle: 'Touch & Swipe', content: 'Create custom gestures like a pro.', color: 'tertiary' },
+            { title: 'Web Components', subtitle: 'Under the Hood', content: 'Ionic is built with powerful Web Components.', color: 'dark' },
+            { title: 'Responsive Design', subtitle: 'Mobile First', content: 'Ionic uses CSS Grid & Flex for adaptive layouts.', color: 'warning' },
+            { title: 'Native Plugins', subtitle: 'Extend Capabilities', content: 'Add geolocation, camera, haptics, and more.', color: 'danger' },
+            { title: 'Skeleton Text', subtitle: 'Smooth Loading UX', content: 'Keep users happy while data loads.', color: 'light' },
+            { title: 'Ionicons', subtitle: 'Iconic Design', content: 'Over 700 beautiful icons for your UI.', color: 'medium' },
+            { title: 'Ionic Animations', subtitle: 'Delightful Motion', content: 'Create fluid UI transitions with ease.', color: 'success' },
+            { title: 'Unit Testing', subtitle: 'Build with Confidence', content: 'Use Jest & testing libraries for stability.', color: 'primary' }
           ].map((card, index) => (
             <IonCard
               key={index}
